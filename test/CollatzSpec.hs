@@ -1,8 +1,8 @@
-module Codewars.Kata.Collatz.Test where
-import           Codewars.Kata.Collatz (collatz)
+module CollatzSpec where
+import           Collatz (collatz)
 import           Test.Hspec
 
-main = hspec $ do
+spec = do
   describe "collatz length" $ do
     it "should work for some examples" $ do
       collatz  1 `shouldBe`  1

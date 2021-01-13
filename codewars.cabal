@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 3aa6973a818519c42274414e65c4e04889e15036452c38eb1f921aebf874fdfb
+-- hash: d335eda50e9f18bf8c1ed628bdd6306dff44044a70b4617c1e0cd59d7712d792
 
 name:           codewars
 version:        0.1.0.0
@@ -27,6 +27,7 @@ source-repository head
 
 library
   exposed-modules:
+      Collatz
       Lib
   other-modules:
       Paths_codewars
@@ -36,6 +37,7 @@ library
       QuickCheck
     , base >=4.7 && <5
     , hspec
+    , transformers
   default-language: Haskell2010
 
 executable codewars-exe
@@ -50,12 +52,14 @@ executable codewars-exe
     , base >=4.7 && <5
     , codewars
     , hspec
+    , transformers
   default-language: Haskell2010
 
 test-suite codewars-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      CollatzSpec
       Paths_codewars
   hs-source-dirs:
       test
@@ -65,4 +69,5 @@ test-suite codewars-test
     , base >=4.7 && <5
     , codewars
     , hspec
+    , transformers
   default-language: Haskell2010

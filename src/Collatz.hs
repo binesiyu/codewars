@@ -1,4 +1,4 @@
-module Codewars.Kata.Collatz where
+module Collatz where
 
 import           Control.Monad             (return, (>>))
 import           Control.Monad.Trans.State (State, execState, modify)
